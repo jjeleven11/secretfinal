@@ -1,0 +1,23 @@
+<h1>Veux tu connaitre l'ultime réponse ? Celle de l'univers !!</h1>
+
+<% if logged_in? %>
+  <h2><a href="static_pages/secret">Connaître la réponse</a></h2>
+<% else %>
+  <h2><a href="login" data-confirm="Il faut ce connecter d'abord">Connaître la réponse</a></h2>
+<% end %>
+
+    <% if logged_in? %>
+
+    <% else %>
+      <%= link_to "Crée un compte !", signup_path %>
+    <% end %>
+
+  <% if @users.length >= 1 %>
+    <p>Il y a déjà <%= @users.length %> profils</p>
+  <% else %>
+    <p>Sois le premier à connaitre la réponse de l'univers !</p>
+  <% end %>
+
+
+
+Réduire 

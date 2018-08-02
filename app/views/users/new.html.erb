@@ -1,0 +1,14 @@
+<% provide(:title, 'Sign up') %>
+        <h1>S'enregistrer</h1>
+        <%= form_for(@user) do |f| %>
+          <%= f.label :email %>
+          <%= f.email_field :email %>
+          <%= f.label :password, "Mot de passe" %>
+          <%= f.password_field :password %>
+          <%= f.label :password_confirmation, "Confirmer vôtre mot de passe" %>
+          <%= f.password_field :password_confirmation %>
+          <%= f.submit "Créer mon profil" %>
+        <% end %>
+        <br/>
+        <p>Déjà enregistré ?</p>
+            <a href="login">Se connecter</a>
